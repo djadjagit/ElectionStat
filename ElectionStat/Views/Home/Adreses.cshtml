@@ -1,0 +1,30 @@
+﻿@model ElectionStat.Models.StartOiks
+@{
+    Layout = "~/Views/Shared/_AllPages.cshtml";
+    ViewBag.Title = "Адреса домов по УИКам Великого Новгорода на 2018 год";
+}
+<div class="navbar navbar-fixed-top">
+    <div class="row" style="padding-top:10px">
+        <div class="col-xs-4">
+            @using (Ajax.BeginForm("UikHousesAdres", "Home", null, new AjaxOptions { HttpMethod = "post", InsertionMode = InsertionMode.Replace, UpdateTargetId = "container" }))
+            {
+                <div style="float:left; padding-left:20px"><strong>Выбери УИК:</strong></div>
+                <select id="UikSelect" name="UikSelect" onchange="$(this).parents('form:first').submit(); $('div#loading').show(); style='float:left'" ;>
+                    @*onChange через jQuery обязательно, иначе не будет PartialView*@
+                    @for (int i = 0; i < @Model.UikNumbers.Length; i++)
+                    {
+                        <option value="@Model.UikNumbers[i]">@Model.UikNumbers[i]</option>
+                    }
+                </select>
+                <div id="loading" hidden  style="float:left"><img src='@Url.Content("~/images/loading_spinner.gif")' width="20" height="20"></div>
+            }
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    foo1 = function myFunction() {
+    @Html.Raw(@Model.ScryptBody)
+    @Html.Raw(@Model.ScryptEnd)
+    };
+</script>
+<div id="container"></div>

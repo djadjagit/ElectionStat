@@ -1,0 +1,1 @@
+workstation id=uikadresa.mssql.somee.com;packet size=4096;user id=bankers_SQLLogin_1;pwd=nc2nxg6hdb;data source=uikadresa.mssql.somee.com;persist security info=False;initial catalog=uikadresa

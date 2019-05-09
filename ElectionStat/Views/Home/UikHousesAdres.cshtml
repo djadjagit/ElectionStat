@@ -1,0 +1,12 @@
+﻿@*model ElectionStat.Models.StartOiks*@
+@model string
+@*@{
+    /**/
+
+    Layout = null;
+    ViewBag.Title = "Выбран УИК № " + Model;
+}*@
+<script type="text/javascript">
+    @Html.Raw(@Model)
+    $('div#loading').hide();
+</script>

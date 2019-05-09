@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="nojs html" lang="ru-RU">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="description" content="Сайт о выборах в Новгородской области" />
+    <meta name="keywords" content="выборы" />
+    <meta name="generator" content="2018.0.0.379" />
+    <meta name="yandex-verification" content="df380a72c1458072" /><!-- custom meta -->
+
+    <script type="text/javascript">
+        // Update the 'nojs'/'js' class on the html node
+        document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
+
+        // Check that all required assets are uploaded and up-to-date
+        if (typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = { "required": ["museutils.js", "museconfig.js", "jquery.musepolyfill.bgsize.js", "require.js", "index.css"], "outOfDate": [] };
+    </script>
+
+    <link rel="shortcut icon" href="images/%d0%b4%d0%be%d0%bc%d0%b0%d1%88%d0%bd%d1%8f%d1%8f-favicon.ico?crc=4027077904" />
+    <title>Выборы в Новгородской области</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="~/Content/site_global.css?crc=444006867" />
+    <link rel="stylesheet" type="text/css" href="~/Content/index.css?crc=161188894" id="pagesheet" />
+    <!--custom head HTML-->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        var yaParams = { ip_adress: "<? echo $_SERVER['REMOTE_ADDR'];?>" };
+        //объявляем параметр ip_adress и записываем в него IP посетителя
+    </script>
+    <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter48504422 = new Ya.Metrika({ id: 48504422, params: window.yaParams, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/48504422" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    @RenderBody();
+</body>
+</html>

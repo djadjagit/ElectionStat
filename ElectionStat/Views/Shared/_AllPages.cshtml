@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/jquery-1.10.2.js")@*//обязательно для частичного обновления страницы*@
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")@*//обязательно для частичного обновления страницы*@
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.myMap;
+        ymaps.ready(init);
+        function init() {
+            window.myMap = new ymaps.Map("map", {
+                center: [58.521389, 31.275707],
+                zoom: 12,
+                @*type: 'yandex#hybrid',*@
+                controls: ['zoomControl', 'fullscreenControl']
+            });
+            foo1();
+        };
+    </script>
+    @*<script>
+        foo1=function myFunction() {
+            window.myMap.events.add('click', function (e) {
+                var coords = e.get('coords');
+                var new_coords = [coords[0].toPrecision(8), coords[1].toPrecision(8)];
+                //document.getElementById("AdresCoords").value = new_coords;
+                //document.getElementById("AdresCoords").style.width = ((document.getElementById("AdresCoords").value.length) * 8) + 'px';
+                //if (!window.myMap.balloon.isOpen()) {
+                //    var coords = e.get('coords');
+                //    window.myMap.balloon.open(coords, {
+                //        contentHeader: 'Событие!',
+                //        contentBody: '<p>Кто-то щелкнул по карте.</p>' +
+                //            '<p>Координаты щелчка: ' + [
+                //                coords[0].toPrecision(6),
+                //                coords[1].toPrecision(6)
+                //            ].join(', ') + '</p>',
+                //        contentFooter: '<sup>Щелкните еще раз</sup>'
+                //    });
+                //}
+                //else {
+                //    window.myMap.balloon.close();
+                //}
+            })
+        };
+    </script>*@
+</head>
+<body>
+    @RenderBody()
+    <div id="map"></div>
+</body>
+</html>

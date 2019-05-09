@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище uikadresaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "uikadresa.dbo.adresa" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="adresa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uik" Type="smallint" />
+          <Property Name="lon" Type="nvarchar" MaxLength="15" />
+          <Property Name="lat" Type="nvarchar" MaxLength="15" />
+          <Property Name="adres" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "uikadresa.dbo.guber_2017" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="guber_2017">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rayon" Type="nvarchar" MaxLength="30" />
+          <Property Name="uik" Type="smallint" />
+          <Property Name="p1" Type="smallint" />
+          <Property Name="p7" Type="smallint" />
+          <Property Name="p8" Type="smallint" />
+          <Property Name="k1_c" Type="smallint" />
+          <Property Name="k1_p" Type="real" />
+          <Property Name="k2_c" Type="smallint" />
+          <Property Name="k2_p" Type="real" />
+          <Property Name="k3_c" Type="smallint" />
+          <Property Name="k3_p" Type="real" />
+          <Property Name="k4_c" Type="smallint" />
+          <Property Name="k4_p" Type="real" />
+          <Property Name="k5_c" Type="smallint" />
+          <Property Name="k5_p" Type="real" />
+          <Property Name="voter" Type="smallint" />
+          <Property Name="adres" Type="nvarchar" MaxLength="255" />
+          <Property Name="lon" Type="nvarchar" MaxLength="255" />
+          <Property Name="lat" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "uikadresa.dbo.obl_uiks_18032018" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="obl_uiks_18032018">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rayon" Type="nvarchar" MaxLength="30" />
+          <Property Name="uik" Type="smallint" />
+          <Property Name="p1" Type="smallint" />
+          <Property Name="p2" Type="smallint" />
+          <Property Name="p3" Type="smallint" />
+          <Property Name="p4" Type="smallint" />
+          <Property Name="p5" Type="smallint" />
+          <Property Name="p6" Type="smallint" />
+          <Property Name="p7" Type="smallint" />
+          <Property Name="p8" Type="smallint" />
+          <Property Name="p9" Type="smallint" />
+          <Property Name="p10" Type="smallint" />
+          <Property Name="p11" Type="smallint" />
+          <Property Name="p12" Type="smallint" />
+          <Property Name="k1_c" Type="smallint" />
+          <Property Name="k1_p" Type="real" />
+          <Property Name="k2_c" Type="smallint" />
+          <Property Name="k2_p" Type="real" />
+          <Property Name="k3_c" Type="smallint" />
+          <Property Name="k3_p" Type="real" />
+          <Property Name="k4_c" Type="smallint" />
+          <Property Name="k4_p" Type="real" />
+          <Property Name="k5_c" Type="smallint" />
+          <Property Name="k5_p" Type="real" />
+          <Property Name="k6_c" Type="smallint" />
+          <Property Name="k6_p" Type="real" />
+          <Property Name="k7_c" Type="smallint" />
+          <Property Name="k7_p" Type="real" />
+          <Property Name="k8_c" Type="smallint" />
+          <Property Name="k8_p" Type="real" />
+          <Property Name="voter" Type="smallint" />
+          <Property Name="adres" Type="nvarchar" MaxLength="255" />
+          <Property Name="lon" Type="nvarchar" MaxLength="255" />
+          <Property Name="lat" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "uikadresa.dbo.uiks" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="uiks">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="oik" Type="smallint" />
+          <Property Name="uik" Type="smallint" />
+          <Property Name="lon" Type="nvarchar" MaxLength="255" />
+          <Property Name="lat" Type="nvarchar" MaxLength="255" />
+          <Property Name="adres" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "uikadresa.dbo.VN_18032018" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="VN_18032018">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rayon" Type="nvarchar" MaxLength="30" />
+          <Property Name="uik" Type="smallint" />
+          <Property Name="p1" Type="smallint" />
+          <Property Name="p2" Type="smallint" />
+          <Property Name="p3" Type="smallint" />
+          <Property Name="p4" Type="smallint" />
+          <Property Name="p5" Type="smallint" />
+          <Property Name="p6" Type="smallint" />
+          <Property Name="p7" Type="smallint" />
+          <Property Name="p8" Type="smallint" />
+          <Property Name="p9" Type="smallint" />
+          <Property Name="p10" Type="smallint" />
+          <Property Name="p11" Type="smallint" />
+          <Property Name="p12" Type="smallint" />
+          <Property Name="k1_c" Type="smallint" />
+          <Property Name="k1_p" Type="real" />
+          <Property Name="k2_c" Type="smallint" />
+          <Property Name="k2_p" Type="real" />
+          <Property Name="k3_c" Type="smallint" />
+          <Property Name="k3_p" Type="real" />
+          <Property Name="k4_c" Type="smallint" />
+          <Property Name="k4_p" Type="real" />
+          <Property Name="k5_c" Type="smallint" />
+          <Property Name="k5_p" Type="real" />
+          <Property Name="k6_c" Type="smallint" />
+          <Property Name="k6_p" Type="real" />
+          <Property Name="k7_c" Type="smallint" />
+          <Property Name="k7_p" Type="real" />
+          <Property Name="k8_c" Type="smallint" />
+          <Property Name="k8_p" Type="real" />
+          <Property Name="voter" Type="smallint" />
+          <Property Name="adres" Type="nvarchar" MaxLength="255" />
+          <Property Name="lon" Type="nvarchar" MaxLength="255" />
+          <Property Name="lat" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Function Name="RezOblPrez2018" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="rayon" Type="nvarchar" MaxLength="30" />
+                <Property Name="p1" Type="int" />
+                <Property Name="p78" Type="int" />
+                <Property Name="k2_c" Type="int" />
+                <Property Name="k3_c" Type="int" />
+                <Property Name="k4_c" Type="int" />
+                <Property Name="k_c" Type="int" />
+                <Property Name="lat" Type="decimal" Precision="38" Scale="8" />
+                <Property Name="lon" Type="decimal" Precision="38" Scale="8" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <EntityContainer Name="Хранилище uikadresaModelContainer">
+          <EntitySet Name="adresa" EntityType="Self.adresa" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [adresa].[id] AS [id], 
+    [adresa].[uik] AS [uik], 
+    [adresa].[lon] AS [lon], 
+    [adresa].[lat] AS [lat], 
+    [adresa].[adres] AS [adres]
+    FROM [dbo].[adresa] AS [adresa]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="guber_2017" EntityType="Self.guber_2017" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [guber_2017].[id] AS [id], 
+    [guber_2017].[rayon] AS [rayon], 
+    [guber_2017].[uik] AS [uik], 
+    [guber_2017].[p1] AS [p1], 
+    [guber_2017].[p7] AS [p7], 
+    [guber_2017].[p8] AS [p8], 
+    [guber_2017].[k1_c] AS [k1_c], 
+    [guber_2017].[k1_p] AS [k1_p], 
+    [guber_2017].[k2_c] AS [k2_c], 
+    [guber_2017].[k2_p] AS [k2_p], 
+    [guber_2017].[k3_c] AS [k3_c], 
+    [guber_2017].[k3_p] AS [k3_p], 
+    [guber_2017].[k4_c] AS [k4_c], 
+    [guber_2017].[k4_p] AS [k4_p], 
+    [guber_2017].[k5_c] AS [k5_c], 
+    [guber_2017].[k5_p] AS [k5_p], 
+    [guber_2017].[voter] AS [voter], 
+    [guber_2017].[adres] AS [adres], 
+    [guber_2017].[lon] AS [lon], 
+    [guber_2017].[lat] AS [lat]
+    FROM [dbo].[guber_2017] AS [guber_2017]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="obl_uiks_18032018" EntityType="Self.obl_uiks_18032018" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [obl_uiks_18032018].[id] AS [id], 
+    [obl_uiks_18032018].[rayon] AS [rayon], 
+    [obl_uiks_18032018].[uik] AS [uik], 
+    [obl_uiks_18032018].[p1] AS [p1], 
+    [obl_uiks_18032018].[p2] AS [p2], 
+    [obl_uiks_18032018].[p3] AS [p3], 
+    [obl_uiks_18032018].[p4] AS [p4], 
+    [obl_uiks_18032018].[p5] AS [p5], 
+    [obl_uiks_18032018].[p6] AS [p6], 
+    [obl_uiks_18032018].[p7] AS [p7], 
+    [obl_uiks_18032018].[p8] AS [p8], 
+    [obl_uiks_18032018].[p9] AS [p9], 
+    [obl_uiks_18032018].[p10] AS [p10], 
+    [obl_uiks_18032018].[p11] AS [p11], 
+    [obl_uiks_18032018].[p12] AS [p12], 
+    [obl_uiks_18032018].[k1_c] AS [k1_c], 
+    [obl_uiks_18032018].[k1_p] AS [k1_p], 
+    [obl_uiks_18032018].[k2_c] AS [k2_c], 
+    [obl_uiks_18032018].[k2_p] AS [k2_p], 
+    [obl_uiks_18032018].[k3_c] AS [k3_c], 
+    [obl_uiks_18032018].[k3_p] AS [k3_p], 
+    [obl_uiks_18032018].[k4_c] AS [k4_c], 
+    [obl_uiks_18032018].[k4_p] AS [k4_p], 
+    [obl_uiks_18032018].[k5_c] AS [k5_c], 
+    [obl_uiks_18032018].[k5_p] AS [k5_p], 
+    [obl_uiks_18032018].[k6_c] AS [k6_c], 
+    [obl_uiks_18032018].[k6_p] AS [k6_p], 
+    [obl_uiks_18032018].[k7_c] AS [k7_c], 
+    [obl_uiks_18032018].[k7_p] AS [k7_p], 
+    [obl_uiks_18032018].[k8_c] AS [k8_c], 
+    [obl_uiks_18032018].[k8_p] AS [k8_p], 
+    [obl_uiks_18032018].[voter] AS [voter], 
+    [obl_uiks_18032018].[adres] AS [adres], 
+    [obl_uiks_18032018].[lon] AS [lon], 
+    [obl_uiks_18032018].[lat] AS [lat]
+    FROM [dbo].[obl_uiks_18032018] AS [obl_uiks_18032018]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="uiks" EntityType="Self.uiks" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [uiks].[id] AS [id], 
+    [uiks].[oik] AS [oik], 
+    [uiks].[uik] AS [uik], 
+    [uiks].[lon] AS [lon], 
+    [uiks].[lat] AS [lat], 
+    [uiks].[adres] AS [adres]
+    FROM [dbo].[uiks] AS [uiks]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VN_18032018" EntityType="Self.VN_18032018" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VN_18032018].[id] AS [id], 
+    [VN_18032018].[rayon] AS [rayon], 
+    [VN_18032018].[uik] AS [uik], 
+    [VN_18032018].[p1] AS [p1], 
+    [VN_18032018].[p2] AS [p2], 
+    [VN_18032018].[p3] AS [p3], 
+    [VN_18032018].[p4] AS [p4], 
+    [VN_18032018].[p5] AS [p5], 
+    [VN_18032018].[p6] AS [p6], 
+    [VN_18032018].[p7] AS [p7], 
+    [VN_18032018].[p8] AS [p8], 
+    [VN_18032018].[p9] AS [p9], 
+    [VN_18032018].[p10] AS [p10], 
+    [VN_18032018].[p11] AS [p11], 
+    [VN_18032018].[p12] AS [p12], 
+    [VN_18032018].[k1_c] AS [k1_c], 
+    [VN_18032018].[k1_p] AS [k1_p], 
+    [VN_18032018].[k2_c] AS [k2_c], 
+    [VN_18032018].[k2_p] AS [k2_p], 
+    [VN_18032018].[k3_c] AS [k3_c], 
+    [VN_18032018].[k3_p] AS [k3_p], 
+    [VN_18032018].[k4_c] AS [k4_c], 
+    [VN_18032018].[k4_p] AS [k4_p], 
+    [VN_18032018].[k5_c] AS [k5_c], 
+    [VN_18032018].[k5_p] AS [k5_p], 
+    [VN_18032018].[k6_c] AS [k6_c], 
+    [VN_18032018].[k6_p] AS [k6_p], 
+    [VN_18032018].[k7_c] AS [k7_c], 
+    [VN_18032018].[k7_p] AS [k7_p], 
+    [VN_18032018].[k8_c] AS [k8_c], 
+    [VN_18032018].[k8_p] AS [k8_p], 
+    [VN_18032018].[voter] AS [voter], 
+    [VN_18032018].[adres] AS [adres], 
+    [VN_18032018].[lon] AS [lon], 
+    [VN_18032018].[lat] AS [lat]
+    FROM [dbo].[VN_18032018] AS [VN_18032018]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="uikadresaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="adresa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uik" Type="Int16" />
+          <Property Name="lon" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="lat" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="adres" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="guber_2017">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rayon" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="uik" Type="Int16" />
+          <Property Name="p1" Type="Int16" />
+          <Property Name="p7" Type="Int16" />
+          <Property Name="p8" Type="Int16" />
+          <Property Name="k1_c" Type="Int16" />
+          <Property Name="k1_p" Type="Single" />
+          <Property Name="k2_c" Type="Int16" />
+          <Property Name="k2_p" Type="Single" />
+          <Property Name="k3_c" Type="Int16" />
+          <Property Name="k3_p" Type="Single" />
+          <Property Name="k4_c" Type="Int16" />
+          <Property Name="k4_p" Type="Single" />
+          <Property Name="k5_c" Type="Int16" />
+          <Property Name="k5_p" Type="Single" />
+          <Property Name="voter" Type="Int16" />
+          <Property Name="adres" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="obl_uiks_18032018">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rayon" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="uik" Type="Int16" />
+          <Property Name="p1" Type="Int16" />
+          <Property Name="p2" Type="Int16" />
+          <Property Name="p3" Type="Int16" />
+          <Property Name="p4" Type="Int16" />
+          <Property Name="p5" Type="Int16" />
+          <Property Name="p6" Type="Int16" />
+          <Property Name="p7" Type="Int16" />
+          <Property Name="p8" Type="Int16" />
+          <Property Name="p9" Type="Int16" />
+          <Property Name="p10" Type="Int16" />
+          <Property Name="p11" Type="Int16" />
+          <Property Name="p12" Type="Int16" />
+          <Property Name="k1_c" Type="Int16" />
+          <Property Name="k1_p" Type="Single" />
+          <Property Name="k2_c" Type="Int16" />
+          <Property Name="k2_p" Type="Single" />
+          <Property Name="k3_c" Type="Int16" />
+          <Property Name="k3_p" Type="Single" />
+          <Property Name="k4_c" Type="Int16" />
+          <Property Name="k4_p" Type="Single" />
+          <Property Name="k5_c" Type="Int16" />
+          <Property Name="k5_p" Type="Single" />
+          <Property Name="k6_c" Type="Int16" />
+          <Property Name="k6_p" Type="Single" />
+          <Property Name="k7_c" Type="Int16" />
+          <Property Name="k7_p" Type="Single" />
+          <Property Name="k8_c" Type="Int16" />
+          <Property Name="k8_p" Type="Single" />
+          <Property Name="voter" Type="Int16" />
+          <Property Name="adres" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="uiks">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="oik" Type="Int16" />
+          <Property Name="uik" Type="Int16" />
+          <Property Name="lon" Type="String" Unicode="true" FixedLength="false" MaxLength="255" />
+          <Property Name="lat" Type="String" Unicode="true" FixedLength="false" MaxLength="255" />
+          <Property Name="adres" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VN_18032018">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rayon" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="uik" Type="Int16" />
+          <Property Name="p1" Type="Int16" />
+          <Property Name="p2" Type="Int16" />
+          <Property Name="p3" Type="Int16" />
+          <Property Name="p4" Type="Int16" />
+          <Property Name="p5" Type="Int16" />
+          <Property Name="p6" Type="Int16" />
+          <Property Name="p7" Type="Int16" />
+          <Property Name="p8" Type="Int16" />
+          <Property Name="p9" Type="Int16" />
+          <Property Name="p10" Type="Int16" />
+          <Property Name="p11" Type="Int16" />
+          <Property Name="p12" Type="Int16" />
+          <Property Name="k1_c" Type="Int16" />
+          <Property Name="k1_p" Type="Single" />
+          <Property Name="k2_c" Type="Int16" />
+          <Property Name="k2_p" Type="Single" />
+          <Property Name="k3_c" Type="Int16" />
+          <Property Name="k3_p" Type="Single" />
+          <Property Name="k4_c" Type="Int16" />
+          <Property Name="k4_p" Type="Single" />
+          <Property Name="k5_c" Type="Int16" />
+          <Property Name="k5_p" Type="Single" />
+          <Property Name="k6_c" Type="Int16" />
+          <Property Name="k6_p" Type="Single" />
+          <Property Name="k7_c" Type="Int16" />
+          <Property Name="k7_p" Type="Single" />
+          <Property Name="k8_c" Type="Int16" />
+          <Property Name="k8_p" Type="Single" />
+          <Property Name="voter" Type="Int16" />
+          <Property Name="adres" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lat" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="uikadresaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="adresa" EntityType="Self.adresa" />
+          <EntitySet Name="guber_2017" EntityType="Self.guber_2017" />
+          <EntitySet Name="obl_uiks_18032018" EntityType="Self.obl_uiks_18032018" />
+          <EntitySet Name="uiks" EntityType="Self.uiks" />
+          <EntitySet Name="VN_18032018" EntityType="Self.VN_18032018" />
+          <FunctionImport Name="RezOblPrez2018" IsComposable="true" ReturnType="Collection(uikadresaModel.RezOblPrez2018_Result)" />
+          </EntityContainer>
+<Function Name="Str2Double" ReturnType="Edm.Decimal">
+   <Parameter Name="coords" Type="Edm.String" />
+   <DefiningExpression>
+	CAST(coords AS DECIMAL(10,8))
+   </DefiningExpression>
+</Function>
+        <ComplexType Name="RezOblPrez2018_Result">
+          <Property Type="String" Name="rayon" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="p1" Nullable="true" />
+          <Property Type="Int32" Name="p78" Nullable="true" />
+          <Property Type="Int32" Name="k2_c" Nullable="true" />
+          <Property Type="Int32" Name="k3_c" Nullable="true" />
+          <Property Type="Int32" Name="k4_c" Nullable="true" />
+          <Property Type="Int32" Name="k_c" Nullable="true" />
+          <Property Type="Decimal" Name="lat" Nullable="true" Precision="38" Scale="8" />
+          <Property Type="Decimal" Name="lon" Nullable="true" Precision="38" Scale="8" />
+        </ComplexType>      
+</Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище uikadresaModelContainer" CdmEntityContainer="uikadresaEntities">
+          <EntitySetMapping Name="adresa">
+            <EntityTypeMapping TypeName="uikadresaModel.adresa">
+              <MappingFragment StoreEntitySet="adresa">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="uik" ColumnName="uik" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="guber_2017">
+            <EntityTypeMapping TypeName="uikadresaModel.guber_2017">
+              <MappingFragment StoreEntitySet="guber_2017">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rayon" ColumnName="rayon" />
+                <ScalarProperty Name="uik" ColumnName="uik" />
+                <ScalarProperty Name="p1" ColumnName="p1" />
+                <ScalarProperty Name="p7" ColumnName="p7" />
+                <ScalarProperty Name="p8" ColumnName="p8" />
+                <ScalarProperty Name="k1_c" ColumnName="k1_c" />
+                <ScalarProperty Name="k1_p" ColumnName="k1_p" />
+                <ScalarProperty Name="k2_c" ColumnName="k2_c" />
+                <ScalarProperty Name="k2_p" ColumnName="k2_p" />
+                <ScalarProperty Name="k3_c" ColumnName="k3_c" />
+                <ScalarProperty Name="k3_p" ColumnName="k3_p" />
+                <ScalarProperty Name="k4_c" ColumnName="k4_c" />
+                <ScalarProperty Name="k4_p" ColumnName="k4_p" />
+                <ScalarProperty Name="k5_c" ColumnName="k5_c" />
+                <ScalarProperty Name="k5_p" ColumnName="k5_p" />
+                <ScalarProperty Name="voter" ColumnName="voter" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="obl_uiks_18032018">
+            <EntityTypeMapping TypeName="uikadresaModel.obl_uiks_18032018">
+              <MappingFragment StoreEntitySet="obl_uiks_18032018">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rayon" ColumnName="rayon" />
+                <ScalarProperty Name="uik" ColumnName="uik" />
+                <ScalarProperty Name="p1" ColumnName="p1" />
+                <ScalarProperty Name="p2" ColumnName="p2" />
+                <ScalarProperty Name="p3" ColumnName="p3" />
+                <ScalarProperty Name="p4" ColumnName="p4" />
+                <ScalarProperty Name="p5" ColumnName="p5" />
+                <ScalarProperty Name="p6" ColumnName="p6" />
+                <ScalarProperty Name="p7" ColumnName="p7" />
+                <ScalarProperty Name="p8" ColumnName="p8" />
+                <ScalarProperty Name="p9" ColumnName="p9" />
+                <ScalarProperty Name="p10" ColumnName="p10" />
+                <ScalarProperty Name="p11" ColumnName="p11" />
+                <ScalarProperty Name="p12" ColumnName="p12" />
+                <ScalarProperty Name="k1_c" ColumnName="k1_c" />
+                <ScalarProperty Name="k1_p" ColumnName="k1_p" />
+                <ScalarProperty Name="k2_c" ColumnName="k2_c" />
+                <ScalarProperty Name="k2_p" ColumnName="k2_p" />
+                <ScalarProperty Name="k3_c" ColumnName="k3_c" />
+                <ScalarProperty Name="k3_p" ColumnName="k3_p" />
+                <ScalarProperty Name="k4_c" ColumnName="k4_c" />
+                <ScalarProperty Name="k4_p" ColumnName="k4_p" />
+                <ScalarProperty Name="k5_c" ColumnName="k5_c" />
+                <ScalarProperty Name="k5_p" ColumnName="k5_p" />
+                <ScalarProperty Name="k6_c" ColumnName="k6_c" />
+                <ScalarProperty Name="k6_p" ColumnName="k6_p" />
+                <ScalarProperty Name="k7_c" ColumnName="k7_c" />
+                <ScalarProperty Name="k7_p" ColumnName="k7_p" />
+                <ScalarProperty Name="k8_c" ColumnName="k8_c" />
+                <ScalarProperty Name="k8_p" ColumnName="k8_p" />
+                <ScalarProperty Name="voter" ColumnName="voter" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uiks">
+            <EntityTypeMapping TypeName="IsTypeOf(uikadresaModel.uiks)">
+              <MappingFragment StoreEntitySet="uiks">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="uik" ColumnName="uik" />
+                <ScalarProperty Name="oik" ColumnName="oik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VN_18032018">
+            <EntityTypeMapping TypeName="uikadresaModel.VN_18032018">
+              <MappingFragment StoreEntitySet="VN_18032018">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rayon" ColumnName="rayon" />
+                <ScalarProperty Name="uik" ColumnName="uik" />
+                <ScalarProperty Name="p1" ColumnName="p1" />
+                <ScalarProperty Name="p2" ColumnName="p2" />
+                <ScalarProperty Name="p3" ColumnName="p3" />
+                <ScalarProperty Name="p4" ColumnName="p4" />
+                <ScalarProperty Name="p5" ColumnName="p5" />
+                <ScalarProperty Name="p6" ColumnName="p6" />
+                <ScalarProperty Name="p7" ColumnName="p7" />
+                <ScalarProperty Name="p8" ColumnName="p8" />
+                <ScalarProperty Name="p9" ColumnName="p9" />
+                <ScalarProperty Name="p10" ColumnName="p10" />
+                <ScalarProperty Name="p11" ColumnName="p11" />
+                <ScalarProperty Name="p12" ColumnName="p12" />
+                <ScalarProperty Name="k1_c" ColumnName="k1_c" />
+                <ScalarProperty Name="k1_p" ColumnName="k1_p" />
+                <ScalarProperty Name="k2_c" ColumnName="k2_c" />
+                <ScalarProperty Name="k2_p" ColumnName="k2_p" />
+                <ScalarProperty Name="k3_c" ColumnName="k3_c" />
+                <ScalarProperty Name="k3_p" ColumnName="k3_p" />
+                <ScalarProperty Name="k4_c" ColumnName="k4_c" />
+                <ScalarProperty Name="k4_p" ColumnName="k4_p" />
+                <ScalarProperty Name="k5_c" ColumnName="k5_c" />
+                <ScalarProperty Name="k5_p" ColumnName="k5_p" />
+                <ScalarProperty Name="k6_c" ColumnName="k6_c" />
+                <ScalarProperty Name="k6_p" ColumnName="k6_p" />
+                <ScalarProperty Name="k7_c" ColumnName="k7_c" />
+                <ScalarProperty Name="k7_p" ColumnName="k7_p" />
+                <ScalarProperty Name="k8_c" ColumnName="k8_c" />
+                <ScalarProperty Name="k8_p" ColumnName="k8_p" />
+                <ScalarProperty Name="voter" ColumnName="voter" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="RezOblPrez2018" FunctionName="Хранилище uikadresaModel.RezOblPrez2018">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="uikadresaModel.RezOblPrez2018_Result">
+                <ScalarProperty Name="rayon" ColumnName="rayon" />
+                <ScalarProperty Name="p1" ColumnName="p1" />
+                <ScalarProperty Name="p78" ColumnName="p78" />
+                <ScalarProperty Name="k2_c" ColumnName="k2_c" />
+                <ScalarProperty Name="k3_c" ColumnName="k3_c" />
+                <ScalarProperty Name="k4_c" ColumnName="k4_c" />
+                <ScalarProperty Name="k_c" ColumnName="k_c" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
